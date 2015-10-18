@@ -21,7 +21,6 @@ def even_fibonacci_sum(max)
 	temp = 0
 
 	while(current < max)
-		puts current
 		if (current % 2 == 0) 
 			sum += current
 		end
@@ -34,3 +33,19 @@ def even_fibonacci_sum(max)
 end
 
 even_fibonacci_sum(4000000)
+
+def largest_prime_factor(number)
+	factor = 2
+	input_number = number
+
+	while factor < number
+		while number % factor == 0
+			number /= factor
+		end
+		factor += 1
+	end
+
+	puts "The highest prime factor of the number #{input_number} is #{number}"
+end
+
+largest_prime_factor(600851475143)
